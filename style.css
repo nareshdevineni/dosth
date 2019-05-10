@@ -1,0 +1,1340 @@
+/*
+Theme Name: Dosth
+Theme URI: https://usablewp.com/themes/dosth/
+Author: Naresh Devineni
+Author URI: https://usablewp.com
+Description: Dosth App is the theme designed to teach WordPress Theme Development. You can play around and you can use this for commercial and personal projects.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: dosth
+Tags: two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/************************************************************
+----------------------OUTLINE OF STYLES----------------------
+1.WordPress WYSIWYG styles
+2.General Styles
+3.Header Styles
+4.Common Menu Styles
+5.Header Menu Styles
+6.Footer Styles
+7.Social Menu Styles
+8.Footer Section Three Styles
+9.Homepage Above the Fold Styles
+10.Homepage Section Three and App Feature Styles
+11.Internal Page Styling
+12.Announcement Page Styling
+13.Blog Index / Archive Styling
+14.Pagination Styling
+15.Blog Sidebar Styles
+16.Single Blog Post page styling
+17.Comment Section styling
+18.Post Navigation Styling
+19.Homepage Blog List styling
+20.Related Blog List styling
+21.Reviews Slider Styling
+22.Search Results Styling
+23.404 page styling
+**************************************************************
+*************************************************************/
+
+/*-------------------------------------------------------------------------------
+  1.WordPress WYSIWYG styles
+-------------------------------------------------------------------------------*/
+
+.alignnone {
+	margin: 5px 20px 20px 0;
+}
+
+.aligncenter, div.aligncenter {
+	display: block;
+	margin: 5px auto 5px auto;
+}
+
+.alignright {
+	float: right;
+	margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+	float: left;
+	margin: 5px 20px 20px 0;
+}
+
+.aligncenter {
+	display: block;
+	margin: 5px auto 5px auto;
+}
+
+@media only screen and (max-width:480px){
+	.single .alignright,.single .alignleft{
+		float:none;
+	}
+}
+
+a img.alignright {
+	float: right;
+	margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+	margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+	float: left;
+	margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption {
+	background: #fff;
+	border: 1px solid #f0f0f0;
+	max-width: 96%;
+/* Image does not overflow the content area */
+	padding: 5px 3px 10px;
+	text-align: center;
+}
+
+.wp-caption.alignnone {
+	margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+	margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+	margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+	border: 0 none;
+	height: auto;
+	margin: 0;
+	max-width: 98.5%;
+	padding: 0;
+	width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+	font-size: 11px;
+	line-height: 17px;
+	margin: 0;
+	padding: 0 4px 5px;
+}
+
+/*-------------------------------------------------------------------------------
+  2.General styles
+-------------------------------------------------------------------------------*/
+
+body {
+	-webkit-animation: bugfix infinite 1s;
+	font-family: 'Ubuntu',sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+}
+
+p {
+	line-height: 1.5;
+	font-size: 14px;
+	font-weight:300;
+}
+
+a,
+a:visited {
+	text-decoration: none;
+}
+
+a:hover,
+a:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="search"]:focus {
+	text-decoration: none;
+	outline: 0;
+}
+
+ul,
+ol {
+	margin: 0;
+	padding: 0;
+}
+
+ol {
+	list-style-type: decimal;
+	list-style-position: inside;
+}
+
+ul {
+	list-style: none;
+}
+
+label {
+	cursor: pointer;
+}
+
+img {
+	max-width: 100%;
+}
+
+.screen-reader-text {
+	position: absolute;
+	left: -9999px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 300;
+}
+
+h1,
+h1 a,
+h2,
+h2 a,
+h3,
+h3 a,
+h4,
+h4 a,
+h5,
+h5 a,
+h6,
+h6 a {
+	margin: 0;
+}
+
+h1 {
+	font-size: 24px;
+}
+
+h2 {
+	margin-bottom: 30px;
+}
+
+h2,
+h2 a {
+	font-size: 30px;
+}
+
+h3 {
+	margin-bottom: 22px;
+}
+
+h3,
+h3 a {
+	font-size: 20px;
+}
+
+h4,
+h4 a {
+	font-size: 18px;
+}
+
+h5 {
+	font-size: 16px;
+}
+
+h6 {
+	font-size: 15px;
+}
+
+iframe {
+	width: 100%;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.seperator {
+	margin: 0 3px;
+}
+
+blockquote {
+	border-left: none;
+	margin-bottom: 10px;
+}
+
+.firstcharacter {
+	float: left;
+	font-size: 60px;
+	padding-top: 4px;
+	line-height: 56px;
+	padding-right: 20px;
+}
+
+.highlighter {
+	display: inline-block;
+	padding: 2px 6px;
+	color: #fff;
+}
+
+.highlighter.grey {
+	background-color: #5e666b;
+}
+
+.clearfix:after {
+	content: ".";
+	visibility: hidden;
+	display: block;
+	height: 0;
+	clear: both;
+}
+
+.parallax-image {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.box-shadow {
+	box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.75);
+}
+
+.box-shadow-negative {
+	box-shadow: -2px -2px 0px 0px rgba(0, 0, 0, 0.75);
+}
+
+button {
+	cursor: pointer;
+}
+
+.container{
+	max-width:960px;
+}
+
+/*-------------------------------------------------------------------------------
+  3.Header styles
+-------------------------------------------------------------------------------*/
+
+header[role="banner"]{
+    height: 92px;
+    border-bottom:1px solid #ccc;
+}
+
+.logo{
+    height: 92px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align:center;
+        -ms-flex-align:center;
+            align-items:center;
+}
+
+.logo a {
+	font-size: 20px;
+	display: block;
+}
+
+.logo a img {
+	width: auto;
+	max-height: 43px;
+	border: 0;
+}
+
+/*-------------------------------------------------------------------------------
+  4.Common Menu Styles
+-------------------------------------------------------------------------------*/
+.menu li {
+	position: relative;
+}
+.menu li:hover > ul, .menu li.sfHover > ul {
+	display: block;
+}
+.menu li:hover > a, .menu li a:focus {
+	color: #fdb813;
+}
+.menu li ul {
+	position: absolute;
+	display: none;
+	top: 100%;
+	z-index: 1000;
+	width: 150px;
+	left: 1px;
+	background-color: #f3f3f3;
+}
+.menu li ul a {
+	display: block;
+	text-transform: capitalize;
+	border-width: 1px;
+	line-height: 32px;
+	font-size: 0.875em;
+	color: #222;
+}
+.menu li ul a:hover, .menu li ul a:focus {
+	background-color: #dadada;
+	color: #222;
+}
+.menu li ul ul {
+	left: 100%;
+}
+.menu li ul li {
+	text-align: left;
+}
+.menu li ul li:last-child a {
+	border-bottom: 0;
+}
+.menu a {
+	display: block;
+	padding-left: 10px;
+	padding-right: 10px;
+	color:#878787;
+}
+.menu > li {
+	display: block;
+    float: left;
+}
+.menu > li:last-child {
+	margin-right: 0;
+}
+.menu > li > a {
+	-moz-transition: 0.3s all;
+	-webkit-transition: 0.3s all;
+	transition: 0.3s all;
+}
+.menu-button{
+	height: 92px;
+}
+.menu-button a{
+	line-height: 38px;
+	border-radius:4px;
+	padding:0 20px;
+	background-color:#fdb813;
+	color: black;
+	font-weight: bold;
+	font-size:16px;
+	margin-left:10px;
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.menu-button a:hover, .menu-button a:focus{
+	background-color:#6e551a;
+	color:white;
+}
+
+/*-------------------------------------------------------------------------------
+  5.Header Menu Styles
+-------------------------------------------------------------------------------*/
+.primary-navigation{
+	height: 92px;
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;	
+}
+.primary-navigation .menu > li:not(.menu-button) >  a{
+	line-height: 92px;
+}
+.current-menu-item a{
+	color: #fdb813;
+}
+
+/*-------------------------------------------------------------------------------
+  6.Footer Styles
+-------------------------------------------------------------------------------*/
+#site-footer .widget{
+	margin-bottom:65px;
+}
+#site-footer .widget:last-child{
+	margin-bottom:0;
+}
+#site-footer .widget h4{
+	font-size:30px;
+	text-align: center;
+	margin-bottom:30px;
+}
+.footer-section-one{
+	background-image:url(assets/images/background-pattern.png);
+	padding:65px 15px 70px;
+}
+.footer-section-one #text-4 a{
+	display: inline-block;
+	margin:0 5px;
+}
+.footer-section-one #text-4 .textwidget{
+	text-align:center;
+}
+.footer-section-one .widget_media_image img{
+	max-width:300px;
+	display: block;
+	margin:0 auto;
+}
+.footer-section-two{
+	padding:70px 0;
+}
+#site-footer .elp-widget .es_caption{
+	font-size:20px;
+	color:#939393;
+}
+#site-footer .es_widget_form{
+	text-align: center;
+}
+#site-footer .es_textbox input{
+	width:400px;
+	margin-right:-4px;
+}
+#site-footer .es_textbox, #site-footer .es_button{
+	display:inline-block;
+}
+#site-footer .es_lablebox{
+	position: absolute;
+	left:-9999px;
+}
+#site-footer .es_textbox input, #site-footer .es_button input{
+	height:43px;
+	display: block;
+	border:0;
+	font-size:20px;
+	-moz-appearance:none;
+	-webkit-appearance:none;
+	appearance:none;
+}
+#site-footer .es_textbox input{
+	background-color:#d4d4d4;
+	padding-left:15px;
+	padding-right:15px;
+}
+#site-footer .es_button input{
+	background-color:#fdb100;
+	color:black;
+	position: relative;
+}
+#site-footer .elp-widget h4{
+	margin-bottom:20px;
+}
+#site-footer .elp-widget .es_caption{
+	margin-bottom:20px;
+}
+
+/*-------------------------------------------------------------------------------
+  7.Social Menu Styles
+-------------------------------------------------------------------------------*/
+#menu-social-menu{
+	text-align: center;
+}
+#menu-social-menu li{
+	display:inline-block;
+	float:none;
+}
+
+.menu li a[href*="facebook.com"],
+.menu li a[href*="instagram.com"],
+.menu li a[href*="twitter.com"] {
+	background-repeat: no-repeat;
+	background-size:30px;
+	width:30px;
+	height: 30px;
+	display: block;
+	text-indent:-9999px;
+	margin:10px;
+}
+
+.menu li a[href*="facebook.com"]{
+	background-image:url(assets/images/facebook2.svg);
+}
+.menu li a[href*="twitter.com"]{
+	background-image:url(assets/images/twitter.svg);
+}
+.menu li a[href*="instagram.com"]{
+	background-image:url(assets/images/instagram.svg);
+}
+.no-svg .menu li a[href*="facebook.com"]{
+	background-image:url(assets/images/facebook2.png);
+}
+.no-svg .menu li a[href*="twitter.com"]{
+	background-image:url(assets/images/twitter.png);
+}
+.no-svg .menu li a[href*="instagram.com"]{
+	background-image:url(assets/images/instagram.png);
+}
+
+/*-------------------------------------------------------------------------------
+  8.Footer Section Three Styles
+-------------------------------------------------------------------------------*/
+.copyright-and-menu{
+	padding:20px 0;
+	border-top:1px solid #ccc;
+}
+.copyright p{
+	margin-bottom:0;
+	font-size:16px;
+	color:#878787;
+}
+.footer-links{
+	float:right;
+}
+
+/*-------------------------------------------------------------------------------
+  9.Homepage Above the Fold Styles
+-------------------------------------------------------------------------------*/
+.home .above-the-fold{
+	background-image:url(assets/images/background-pattern.png);
+}
+
+.home .above-the-fold .introduction-text{
+	margin-top:30px;
+	font-size:25px;
+	margin-bottom:20px;
+	line-height: 1.3;
+}
+.app-store-image-links > div:first-child{
+	margin-right:5px;
+}
+.app-store-image-links > div:last-child{
+	margin-left:5px;
+}
+.app-store-image-links img{
+	width:100%;
+}
+.secondary-color{
+	color: #2e489d;
+}
+.home .above-the-fold .secondary-color{
+	font-size:22px;
+	font-weight: 400;
+}
+
+@media only screen and (min-width:992px){
+	.pull-me-up img{
+		position:relative;
+		margin-top: -80px;
+		display:block;
+		left: 15%;
+		z-index: 1;
+		max-width:500px;
+	}
+	.above-the-fold > div:last-child{
+		position: relative;
+		z-index:2;
+	}
+	.home .above-the-fold .introduction-text{
+		font-size:30px;
+		margin-top:60px;
+	}
+	.home .above-the-fold .introduction-text,
+	.home .above-the-fold .secondary-color,
+	.home .above-the-fold .app-store-image-links{
+		margin-left:15%;	
+	}
+}
+@media only screen and (max-width:991px){
+	.pull-me-up img{
+		margin-top:40px;
+	}
+	.app-store-image-links img{
+		width:180px;
+	}
+}
+@media only screen and (min-width:768px) and (max-width:991px){
+	.above-the-fold .has-2-columns:not(.app-store-image-links){
+		-ms-flex-wrap: nowrap;
+		    flex-wrap: nowrap;
+	}
+}
+@media only screen and (max-width:991px){
+	.app-store-image-links{
+		-ms-flex-wrap: nowrap;
+		    flex-wrap: nowrap;
+	}
+}
+.home .above-the-fold .wp-block-column:first-child,
+.home .above-the-fold .pull-me-up{
+	margin-bottom:0;
+}
+/*-------------------------------------------------------------------------------
+  9.Homepage Section Two Styles
+-------------------------------------------------------------------------------*/
+#watch-dosth-in-action{
+	padding:60px;
+	background-color:#eaeaea;
+	text-align: center;
+}
+#watch-dosth-in-action h2{
+	margin-bottom:50px;
+}
+#watch-dosth-in-action .section-content{
+	max-width:940px;
+	margin:0 auto;
+}
+@media only screen and (max-width:767px){
+	#watch-dosth-in-action{
+		padding:40px 15px;
+	}
+}
+
+/*-------------------------------------------------------------------------------
+  10.Homepage Section Three and App Feature Styles
+-------------------------------------------------------------------------------*/
+.home #section-three, 
+.home #app-feature-one, 
+.home #app-feature-two{
+	padding:30px 15px;
+}
+.home #section-three h2{
+	text-align: center;
+}
+.home #section-three p,
+.home #app-feature-one p, 
+.home #app-feature-two p{
+	font-size:18px;
+	margin-bottom:0;
+}
+.home #app-feature-one h3, 
+.home #app-feature-two h3{
+	margin-bottom:15px;
+	font-size:28px;
+}
+.home #app-feature-two h3{
+	margin-top:40px;
+}
+.home #app-feature-two .section-content{
+	-webkit-box-ordinal-group:2;
+	    -ms-flex-order:1;
+	        order:1;
+}
+.home #app-feature-two img{
+	-webkit-box-ordinal-group:3;
+	    -ms-flex-order:2;
+	        order:2;
+}
+@media only screen and (min-width:768px){
+	.home #app-feature-one, 
+	.home #app-feature-two{
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: justify;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+	}
+	.home #section-three, 
+	.home #app-feature-one, 
+	.home #app-feature-two{
+		max-width:800px;
+		margin:0 auto;
+		padding:60px 15px;
+	}
+	.home #section-three h2{
+		font-size:45px;
+	}
+	.home #app-feature-one .section-content, 
+	.home #app-feature-two .section-content{
+		margin:15px 70px;
+	}
+}
+@media only screen and (max-width:767px){
+	.home #app-feature-one h3{
+		margin-top:40px;
+	}
+	.home #app-feature-one img, 
+	.home #app-feature-two img{
+		margin:0 auto;
+		max-width:300px;
+		display: block;
+	}
+	.home #app-feature-one .section-content, 
+	.home #app-feature-two .section-content{
+		text-align:center;
+	}
+}
+
+/*-------------------------------------------------------------------------------
+  11.Internal Page Styling
+-------------------------------------------------------------------------------*/
+
+.content-container .page-title{
+	background-color: #fdb813;
+	padding:46px 15px;
+	font-size:56px;
+	text-align: center;
+	color:white;
+}
+.content-container .featured-image{
+	margin:40px;
+	position:relative;
+}
+.content-container .featured-image:before{
+	position: absolute;
+	background-color:#f2f2f2;
+	width:100%;
+	height:100%;
+	content:"";
+	left:-20px;
+	top:20px;
+	z-index: -1;
+}
+.page-template-default .actual-content{
+	padding-top:40px;
+	padding-bottom:40px;
+}
+
+
+/*-------------------------------------------------------------------------------
+  12.Announcement Page Styling
+-------------------------------------------------------------------------------*/
+#announcement{
+	background-color:#08278c;
+	padding:50px 0;
+}
+
+#announcement .page-title{
+	text-align:center;	
+	font-size:56px;
+	color:white;
+}
+
+#announcement .announcement-title{
+	margin-top:50px;
+	color:#fdb100;
+	font-size:48px;
+	text-align: center;
+}
+
+#announcement .actual-content p{
+	max-width:600px;
+	font-size:20px;
+	margin:0 auto;
+	color:white;
+	text-align:center;
+}
+
+#announcement .featured-image{
+	max-width:750px;
+	margin:50px auto;
+}
+.logo.centered{
+	max-width:68px;
+	margin:0 auto;
+}
+
+/*-------------------------------------------------------------------------------
+  13.Blog Index / Archive Styling
+-------------------------------------------------------------------------------*/
+.blog .page-title, .archive .page-title{
+	background-color:transparent;
+	color:#1a3794;
+} 
+@media only screen and (min-width:767px){
+	.blog-posts{
+		display:flex;
+		justify-content:space-between;
+		flex-wrap: wrap;
+	}
+	.blog-posts .blog-post{
+		width:48%;
+	}
+}
+.blog-posts .blog-post{	
+	background-color:#f9f9f9;
+	padding:15px;
+	margin-bottom:20px;
+}
+
+.blog-posts .blog-post h2 a, 
+.blog-posts .blog-post h3 a{
+	color:black;
+	font-size:18px;
+}
+.blog-posts .blog-post h2 a:hover, 
+.blog-posts .blog-post h3 a:hover{
+	color:#1a3794;
+}
+.blog-posts .blog-post h2{
+	line-height:1.2;
+	font-size:18px;
+}
+.blog-post-thumb{
+	margin-bottom:15px;
+}
+.blog-posts .blog-post p{
+	font-size:16px;
+}
+.read-more-link, .posted-in a{
+	color:#1a3794;
+	margin-bottom:10px;
+	display:inline-block;
+	border-bottom:1px solid transparent;
+}
+.posted-in{
+	font-size:12px;
+}
+.posted-in span{
+	color:#ccc;
+}
+.read-more-link:hover, .posted-in a:hover{
+	color:black;
+	border-bottom-color:#333;
+}
+
+/*-------------------------------------------------------------------------------
+  14.Pagination Styling
+-------------------------------------------------------------------------------*/
+.pagination{
+	width:100%;
+	margin:30px 0;
+}
+.pagination .nav-links a, .pagination .nav-links .current{
+	background-color:#fdb813;
+	padding:7px 12px;
+	color:white;
+	border-radius:4px;
+	text-transform: uppercase;
+	font-weight:bold;
+}
+
+.pagination .nav-links .current{
+	background-color:#b1b1b1;
+}
+
+/*-------------------------------------------------------------------------------
+  15.Blog Sidebar Styles
+-------------------------------------------------------------------------------*/
+#blog-sidebar .widget{
+	margin-bottom:30px;
+}
+.widget-title{
+	font-size:20px;
+	font-weight:500;
+	color:#1a3794;
+	margin-bottom:10px;
+}
+#blog-sidebar .widget.widget_categories a{
+	font-size:14px;
+}
+#blog-sidebar .widget a{
+	color:#4e4e4e;
+}
+#blog-sidebar .widget .current-cat a{
+	color:#fdb813;
+}
+.search-form{
+	border:1px solid #ccc;
+	padding:5px 10px;
+	display:flex;
+	justify-content: space-between;
+}
+.search-form label{
+	margin-bottom:0;
+}
+.search-form input{
+	border:0;
+}
+.search-form input[type="submit"]{
+	text-indent:-9999px;
+	background-image:url(assets/images/search.svg);
+	background-repeat: no-repeat;
+	background-position:center center;
+	width:30px;
+	background-size:20px;
+}
+.no-svg .search-form input[type="submit"]{
+	background-image:url(assets/images/search.png);
+}
+
+/*-------------------------------------------------------------------------------
+  16.Single Blog Post page styling
+-------------------------------------------------------------------------------*/
+
+.single .full-width-featured-image{
+	min-height:500px;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	background-repeat: no-repeat;
+	background-size:cover;
+	background-position:center center;
+	position:relative;
+}
+.single .full-width-featured-image h1{
+	color:white;
+	position:relative;
+	z-index:2;
+	font-size:50px;
+	text-align:center;
+	max-width:1000px;
+	margin:0 auto;
+}
+.single .full-width-featured-image:after{
+	width:100%;
+	height:100%;
+	content:"";
+	background-color:rgba(0,0,0,0.8);
+	position:absolute;
+	top:0;
+	left:0;
+}
+.single .article-info h4{
+	color:#bfbfbf;
+	font-size:20px;
+	text-transform:lowercase;
+	margin-bottom:10px;
+	margin-top:30px;
+}
+
+.single .article-info a{
+	font-size:16px;
+	color:#1a3794;
+}
+.single #actual-article{
+	padding:30px 0;
+}
+.single #actual-article p{
+	font-size:16px;
+}
+
+/*-------------------------------------------------------------------------------
+  17.Comment Section Styling
+-------------------------------------------------------------------------------*/
+#respond h3, .comments-title{
+	color:black;
+	padding:20px;
+	font-size:20px;
+	border-top:1px solid #000;
+	border-bottom:1px solid #000;
+	margin:30px 0;
+}
+
+#commentform .comment-notes{
+	margin-bottom:20px;
+}
+#commentform label{
+	display:block;
+}
+#commentform input[type="text"],
+#commentform input[type="url"],
+#commentform input[type="email"],
+#commentform textarea{
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin-bottom: 20px;
+	width: 100%;
+	background-color: #f8f8f8;
+	padding: 7px 10px;
+	font-size: 18px;
+}
+
+#commentform input[type="submit"]{
+	line-height: 38px;
+    border-radius: 4px;
+    padding: 0 20px;
+    background-color: #fdb813;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+	border:0;
+	position: relative;
+	transition:all 0.4s;
+	cursor:pointer;
+}
+
+#commentform input[type="submit"]:hover{
+	background-color: #6e551a;
+    color: white;
+}
+.comment-body .comment-author{
+	float:left;
+	width:30%;
+}
+.comment-body .comment-author .fn{
+	display:block;
+	margin-top:10px;
+}
+.comment-body{
+	overflow:hidden;
+	margin-bottom:30px;
+}
+.comment{
+	margin-bottom:30px;
+}
+.comment-list, .children{
+	margin:0;
+	padding:0;
+	list-style-type: none;
+}
+.comment-list > li:first-child{
+	border-top:0;
+	padding-top:0;
+}
+.comment{
+	border-top:1px solid #ccc;
+	padding-top:30px;
+	position:relative;
+}
+.children .comment{
+	border-top:0;
+}
+.comment .children{
+	border-top:1px dotted #5e666b;
+	border-left:1px dotted #5e666b;
+	padding-top:10px;
+	padding-left:10px;
+}
+.children{
+	margin-left:100px;
+}
+.children img{
+	max-width:75px;
+	height:auto;
+}
+.children .fn{
+	font-size:12px;
+}
+.says{
+	display:none;
+}
+.comment-metadata{
+	margin-left:30%;		
+}
+.comment-metadata a{
+	color:#5e666b;
+	font-size:14px;
+	margin-bottom:10px;
+	display:block;
+}
+.comment-reply-link{
+	position:absolute;
+	top:15px;
+	right:0;
+	font-size:12px;
+	color:#1a3794;
+}
+#respond #reply-title{
+	margin-top:0;
+}
+
+.single #actual-article{
+	/* Issue fix */
+	padding-left:15px;
+	padding-right:15px;
+}
+
+/*-------------------------------------------------------------------------------
+  18.Post Navigation Styling
+-------------------------------------------------------------------------------*/
+.next-previous-articles{
+	overflow: hidden;
+	border-top:1px solid #000;
+	margin-top:40px;
+}
+.next-previous-articles > div{
+	width:50%;
+	float:left;
+	padding-top:15px;
+	padding-bottom:25px;
+}
+
+.previous-article, .next-article{
+	display:block;
+	font-size:20px;
+}
+.previous-article{
+	color: #fdb813;
+}
+.next-article{
+	color: #1a3794;
+}
+.previous-article{
+	padding-right:15px;
+	border-right:1px solid #ccc;
+}
+.next-article{
+	padding-left:15px;
+}
+.next-previous-articles a{
+	display:block;
+}
+.next-previous-articles .post-thumb{
+	width:75px;
+	float:left;
+}
+.next-previous-articles .post-title{
+	font-size:16px;
+	margin-left:95px;
+	margin-top:15px;
+	color:black;
+}
+@media only screen and (max-width:767px){
+	.next-previous-articles > div{
+		width:100%;
+	}
+	.previous-article{
+		padding-left:15px;
+		border-right:0;
+	}
+}
+
+/*-------------------------------------------------------------------------------
+  19.Homepage Blog List styling
+-------------------------------------------------------------------------------*/
+.home .blog-posts h2{
+	width:100%;
+	text-align:center;
+}
+.home .blog-posts{
+	max-width:1000px;
+	margin:50px auto;
+}
+.home .blog-posts .blog-post h2{
+	text-align:left;
+}
+@media only screen and (min-width: 767px){
+	.home .blog-posts .blog-post {
+		width: 33%;
+	}
+}
+.blog-posts h3 a{
+	font-size:18px;
+	color:black;
+}
+/*-------------------------------------------------------------------------------
+  20.Related Blog List styling
+-------------------------------------------------------------------------------*/
+.single .related-articles .blog-post{
+	width:100%;
+}
+.single .related-articles h2{
+	font-size:25px;
+	margin-bottom:15px;
+	margin-top:30px;
+	color:#1a3794;
+}
+
+/*-------------------------------------------------------------------------------
+  21.Reviews Slider Styling
+-------------------------------------------------------------------------------*/
+.reviews-container{
+	padding:15px;
+	text-align: center;	
+}
+.reviews-container .review{
+	margin-bottom:50px;
+}
+.nd-dosth-reviews blockquote{
+	font-weight: normal;
+}
+.nd-dosth-reviews blockquote p{
+	color:#fdb100;
+	font-size:26px;
+	font-family:"Georgia", serif;
+	font-style:italic;
+	max-width:700px;
+	margin:0 auto;
+}
+.nd-dosth-reviews blockquote p:before{
+	content:'“';
+}
+.nd-dosth-reviews blockquote p:after{
+	content:'”';
+}
+.nd-dosth-reviews cite{
+	font-style: normal;
+	font-weight:bold;
+}
+.nd-dosth-reviews footer{
+	color:#999;
+	margin-top:15px;
+}
+.slick-dots li{
+	display:inline-block;
+	text-indent:-9999px;
+	width:10px;
+	height:10px;
+	background-color:#ccc;
+	margin:0 5px;
+	border-radius:100%;
+	cursor:pointer;
+}
+.slick-dots{
+	margin-bottom:50px;
+}
+.slick-dots li.slick-active{
+	background-color:#fdb100;
+}
+
+/*-------------------------------------------------------------------------------
+  22.Search Results Styling
+-------------------------------------------------------------------------------*/
+.search-results .page-title{
+	background-color:transparent;
+	color:#fdb100;
+	font-size:36px;
+	padding-bottom:0;
+}
+.search-results .search-query{
+	color:#1a3794;
+	font-size:56px;
+	text-align: center;
+	margin-bottom:50px;
+}
+.search-result{
+	padding-bottom:30px;
+	margin-bottom:30px;
+	border-bottom:1px solid #ccc;
+}
+.search-result h2{
+	font-size:20px;
+}
+
+.search-result p{
+	font-size:16px;
+}
+
+/*-------------------------------------------------------------------------------
+  23.404 Page Styling
+-------------------------------------------------------------------------------*/
+.big-404-page{
+	font-size:100px;
+	text-align:center;
+}
+.error404 .page-title{
+	background-color:#dc3545;
+}
+.error404 p{
+	text-align: center;
+}
+.error404 .menu-button{
+	text-align: center;
+	height: auto;
+	margin-top:30px;
+}
+.error404 .menu-button a{
+	display:inline-block;
+}
+.error404 .or{
+	text-align: center;
+	margin-bottom:20px;
+}
+.error404 .search-form{
+	max-width:300px;
+	margin:0 auto 30px;
+}
